@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+
+        body {
+            /*background-color: #e3d1d1;*/
+            background-color: #e6e6e6;
+        }
+        div#whatIDo, div#welcome, div#background, div#companies, div#boards, div#contact {
+            display: none;
+        }
+        div#base {
+            background-image: url("http://ec2-52-11-165-166.us-west-2.compute.amazonaws.com/~elainemcole/Content/Cover5.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: auto;
+        }
+        div#welcome {
+            /*display: none;*/
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 20px;
+        }
+        div#enter {
+            align-self: center;
+            position: relative;
+        }
+        nav {
+            display: none;
+        }
+        .btn {
+            padding: 14px 24px;
+            border: 0 none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn:focus, .btn:active:focus, .btn.active:focus {
+            outline: 0 none;
+        }
+
+        .btn-primary {
+            background: #e60000;
+            color: none;
+        }
+
+        .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+            background: #b30000;
+        }
+
+        .btn-primary:active, .btn-primary.active {
+            background: #b30000;
+            box-shadow: none;
+        }
+        .btn.outline {
+    	    background: none;
+    	    padding: 12px 22px;
+        }
+        .btn-outline {
+        	border: 2px solid #e60000;
+        	color: #e60000;
+            background: none;
+    	    padding: 12px 22px;
+        }
+        .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active, .open > .dropdown-toggle.btn-primary {
+        	color: #b30000;
+        	border-color: #b30000;
+        }
+        .btn-outline:active, .btn-outline.active {
+        	border-color: #b30000;
+        	color: #b30000;
+        	box-shadow: none;
+        }
+        .btn-round {
+        	border-radius: 24px;
+        }
+    </style>
+
+
+
+    <title>Debby Meredith</title>
+    <meta name="Debby Meredith" content="Debby Meredith Hands-on Interim Engineering Executive, Advisor, and Board Member">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+
+
+      <div class="container">
+          <nav class="navbar navbar-fixed-bottom navbar-light bg-faded">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-md-3">
+                          <h2>DebbyMeredith<small>.com</small><h2>
+                      </div>
+                      <div class="col-md-9">
+                          <a id="goto-welcome" class="navbar-toggler btn btn-round btn-outline" href="#welcome" role="button">Welcome</a>
+                          <a id="goto-wid" class="navbar-toggler btn btn-round btn-outline" href="#whatIDo" role="button">What I Do</a>
+                          <a id="goto-background" class="navbar-toggler btn btn-round btn-outline" href="#background" role="button">Background</a>
+                          <a id="goto-companies" class="navbar-toggler btn btn-round btn-outline" href="#companies" role="button">Companies</a>
+                          <a id="goto-boards" class="navbar-toggler btn btn-round btn-outline" href="#boards" role="button">Boards</a>
+                          <a id="goto-contact" class="navbar-toggler btn btn-round btn-outline" href="#contact" role="button">Contact Me</a>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+          </nav>
+      </div>
+      <div id="base">
+          <div class="container-fluid">
+            </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div id="enter" class="container-fluid text-center">
+                <button id="enter" type="button" class="btn btn-default btn-round btn-outline btn-lg">
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                </button><br><br>
+            </div>
+        </div>
+
+        <br><div class="container-fluid">
+        <div class="panel panel-default" id="welcome">
+        <div class="panel-body">
+            <div class="page-header">
+                <h1>Welcome.</h1>
+            </div>
+            <p class="lead">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="media-body">
+                            <img class="media-heading" src="Content/DebbyRedSweater.jpg" width="180" height="191" alt="DebbyPhoto"/>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <p class="lead">
+                            My name is Debby Meredith. In 2003, after over two decades of being an entrepreneur,
+                            general manager, and venture capitalist, I began working on my own helping various
+                            companies to establish or enhance their development organizations. I've often taken on
+                            interim executive roles working directly with company founders, helping to assemble world-class
+                            teams, architecture software products, and establish an initial roadmap for operational
+                            success. It's been extremely rewarding for me to work with high caliber teams of committed
+                            entrepreneurs and hopefully helpful to the companies as well. In addition to my consulting,
+                            board, and advisory work, I'm currently a <a href="http://www.iconventures.com/team/">venture
+                                partner</a> with Icon Ventures. <a href="http://www.iconventures.com">Icon Ventures</a>
+                                is a venture capital firm seeking to invest in emerging technology-based companies.</p>
+                    </div>
+                </div>
+            </p>
+            <br><br><br><br><br><br><br>
+        </div>
+        </div>
+        </div>
+        <div class="container-fluid">
+            <div class="well" id="whatIDo">
+                <div class="panel-body">
+                    <div class="page-header">
+                        <h1>What I Do.</h1>
+                    </div>
+                    <div id="services-paragraph">
+                        <p class="lead">
+                            Serve as interim VP of Engineering, COO, or CEO<br>
+                            Conduct strategic assessments of engineering organization, processes, and systems<br>
+                            Coach and mentor engineering management<br>
+                            Design, streamline or scale up engineering organizations and/or develop processes<br>
+                            Recruit senior engineering talent<br>
+                            Serve as an Advisor or Board member<br>
+                        </p><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="panel panel-default" id="background">
+                <div class="panel-body">
+                    <div class="page-header">
+                        <h1>My Background.</h1>
+                    </div>
+                    <div id="services-paragraph">
+                        <h1><small>Summary</small></h1>
+
+                        <p class="lead">
+                        Senior executive with proven track record in general management and development of software
+                        products. Extensive experience in both high-growth and turnaround situations
+                        with venture capital experience. Strong management,leadership and engineering skills with ability to communicate at all levels.</p>
+
+                        <h1><small>Experience</small></h1>
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="lead"><em>Consultant, Board Member, Advisor</em></div>
+                                    <ul>
+                                        <li>Working hands-on with start-up companies, primarily as interim VP of Engineering, including OpenTable, Voltage Security, Scribd, Ness, Demandbase, Good Technology, Friendster, and Efficient Frontier.</li>
+                                        <li>Able to take on mentoring projects as well as company/department assessment projects.</li>
+                                        <li>Working with select venture capital firms to provide insight into the engineering, operational and management capabilities of potential investment opportunities.</li>
+                                    </ul>
+                                </div>
+                                <div class="lead col-md-4">2003 – present</div>
+
+                                <div class="col-md-8">
+                                    <div class="lead"><em>Icon Ventures, Venture Partner</em></div>
+                                    <ul>
+                                        <li>Am member of investment team and conduct technical diligence on potential investments.</li>
+                                    </ul>
+                                </div>
+                                <div class="lead col-md-4">2003 – present</div>
+
+                                <div class="col-md-8">
+                                    <div class="lead"><em>Mohr Davidow Ventures, Venture Partner</em></div>
+                                    <ul>
+                                        <li>Involved in software investment decisions and diligence. Post funding, helped assemble world-class engineering teams, architect enterprise software products and roadmaps, and establish engineering processes to build success from the beginning with various MDV portfolio companies.</li>
+                                        <li>Took on key hand-on roles in several MDV portfolio companies, ranging in duration from 5 to 9 months: interim VP Engineering of Terraspring, interim VP Engineering of oneREV Software (company later sold to Agile Software), interim CEO of Terraspring (company subsequently sold to Sun Microsystems), and founding CEO of Proofpoint (privately held company originally funded by MDV and Benchmark Capital).</li>
+                                   </ul>
+                                </div>
+                                <div class="lead col-md-4">2000 – 2003</div>
+
+                                <div class="col-md-8">
+                                    <div class="lead"><em>America Online (by way of Netscape acquisition), Sr. Vice President</em></div>
+                                    <ul>
+                                        <li>Reporting to the iPlanet CEO, participated at executive level establishing and running the Sun-Netscape Alliance.</li>
+                                        <li>Responsible for $50 million annual worldwide services business.</li>
+                                        <li>Managed division of over 250 professionals in offices worldwide including sales representatives, account managers, services engineers and operations personnel.</li>
+                                   </ul>
+                                </div>
+                                <div class="lead col-md-4">1999 – 2000</div>
+                                <div class="col-md-8">
+
+                                        <div class="lead"><em>Netscape Communications (by way of Collabra acquisition)</em>
+                                            <button class="btn btn-round btn-outline" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                 <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                                            </button>
+                                            </div>
+                                </div>
+                                <div class="lead col-md-4">1995 - 1999</div>
+
+                                <div class="collapse " id="collapseExample">
+                                    <div class="col-md-8 well ">
+                                        <div class="col-md-8">
+                                            <div class="lead"><em>Sr. Vice President and General Manager, Customer Satisfaction</em></div>
+                                                <p>Selected to head new division focused on providing superior customer satisfaction, reporting directly to the Netscape CEO. Responsible for Netscape support services and revenue worldwide. Drove creation of new services offerings and self serve web-based capabilities. Additionally, was the leader and spokesperson across the entire corporation for
+                                                customer satisfaction and served on Netscape's Executive Committee.</p>
+                                        </div>
+                                        <div class="lead col-md-4">1998 – 1999</div>
+
+                                        <div class="col-md-8">
+                                            <div class="lead"><em>Sr. Vice President, Strategic Products and Technologies</em></div>
+                                                <p>Responsible for core technology products and components used within Product Development by the Client, Server, and Applications divisions. This included Java, JavaScript, security, and networking services. Changed Netscape's Java strategy from one of extending and porting Sun's Java in constant catch up mode to developing an open Java interface allowing any vendor's Java Virtual Machine to be plugged into the Netscape browser.</p>
+                                        </div>
+                                        <div class="lead col-md-4">1998</div>
+
+                                        <div class="col-md-8">
+                                            <div class="lead"><em>Vice President, Client Product Development</em></div>
+                                                <p>Headed the development of the Netscape's award winning Communicator and Navigator product lines. The organization was over 300 people, including engineering, quality assurance, product marketing, user interface design, and documentation professionals. The browser product suite was released on multiple platforms, in multiple languages, and is one of the most popular software applications ever written.</p>
+                                        </div>
+                                        <div class="lead col-md-4">1997 - 1998</div>
+
+                                        <div class="col-md-8">
+                                            <div class="lead"><em>Vice President, Client Engineering</em></div>
+                                                <p>Responsible for the engineering of all Netscape end-user Internet products which included:
+                                                    <ul style='font-size:10.0pt'>
+                                                     <li>Netscape Navigator, Netscape Navigator Gold, and Netscape Communicator on all platforms, namely Microsoft Windows (3.1, 95, NT), Apple Macintosh (68000, PowerPC), and UNIX (SGI IRIX, Sun Solaris, SunOS, HP-UX, DEC Alpha OSF/1, IBM RS/6000 AIX, BSDI). Netscape Communicator is an integrated suite consisting of a web browser, e-mail client, discussion client, document editor, and calendar component, all which embrace open standards (HTML, XML, HTTP, POP3, IMAP4, LDAP, NNTP). Successfully shipped Navigator 2.0, Navigator 3.0, Navigator Gold 3.0, and Communicator 4.0 and several associated point releases.</li>
+                                                     <li>Netscape Internet Access Edition, a shrink-wrap product for the retail channel.</li>
+                                                     <li>Netscape Dial-up Kit, a customizable product for Internet Service Providers.</li>
+                                                    </ul>
+                                                </p>
+                                        </div>
+
+                                <div class="lead col-md-4">1995 – 1997</div>
+                                </div>
+                            </div>
+                                <div class="col-md-8">
+                                    <div class="lead"><em>Slate Corporation, Vice President Development</em></div>
+                                    <p>Responsible for staffing and management of engineering, product management, quality assurance, and office personnel. Managed team in successfully conceptualizing, designing, developing, and marketing pen-based application software and tools for Microsoft Windows for Pen Computing, GO's PenPoint and Apple Newton, including:
+
+                                    <ul>
+                                     <li>Day-Timer Meeting and Expense Pack, a productivity package for the Apple Newton.</li>
+                                     <li>LapLink Pro for PenPoint and SafetyPen Utilities, utility products for PenPoint.</li>
+                                     <li>PenApps, a cross-platform application development tool for producing pen-based applications on both Microsoft Windows and PenPoint.</li>
+                                     <li>PenBook, a cross-platform viewer and authoring system for documentation on both Microsoft Windows and PenPoint.</li>
+                                     <li>PenPower for Microsoft Word and PenPower for Microsoft PowerPoint, add-in products.</li>
+                                     <li>Jot, an industry standard for the interchange of digital ink.</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                                <div class="lead col-md-4">1990 – 1993</div>
+
+                                <div class="col-md-8">
+                                    <div class="lead"><em>Metaphor Computer Systems</em>
+                                        <button class="btn btn-round btn-outline" type="button" data-toggle="collapse" data-target="#collapseMetaphor" aria-expanded="false" aria-controls="collapseExample">
+                                             <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                                <div class="lead col-md-4">1983 – 1990</div>
+                                <div class="collapse " id="collapseMetaphor">
+                                    <div class="col-md-8 well">
+                                        <div class="col-md-8">
+                                            <p>Responsible for staffing and management of engineering, product management, quality assurance, and office personnel. Managed team in successfully conceptualizing, designing, developing, and marketing pen-based application software and tools for Microsoft Windows for Pen Computing, GO's PenPoint and Apple Newton, including:
+
+                                            <ul>
+                                             <li>Day-Timer Meeting and Expense Pack, a productivity package for the Apple Newton.</li>
+                                             <li>LapLink Pro for PenPoint and SafetyPen Utilities, utility products for PenPoint.</li>
+                                             <li>PenApps, a cross-platform application development tool for producing pen-based applications on both Microsoft Windows and PenPoint.</li>
+                                             <li>PenBook, a cross-platform viewer and authoring system for documentation on both Microsoft Windows and PenPoint.</li>
+                                             <li>PenPower for Microsoft Word and PenPower for Microsoft PowerPoint, add-in products.</li>
+                                             <li>Jot, an industry standard for the interchange of digital ink.</li>
+                                            </ul>
+                                            </p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="lead"><em>Director of Engineering</em></div>
+                                                <p>Responsible for staffing, budget, and management of thirty-five engineers.
+                                                    <ul>
+                                                     <li>Developed 386, OS/2, 68000, and UNIX application software to enable access, analysis, and presentation of data from DB2, SQL/DS, Teradata, Sybase, and Oracle systems.</li>
+                                                     <li>Led efforts, including participation in the formation of the first Unicode standard, to localize and internationalize software.</li>
+                                                     <li>Conceived of, and delivered, several new releases of the application software, including a new line of graphical database reporting tools.</li>
+                                                    </ul>
+                                                </p>
+                                        </div>
+                                        <div class="lead col-md-4">1988 – 1990</div>
+                                        <div class="col-md-8">
+                                            <div class="lead"><em>Engineering Manager</em></div>
+                                                <p>Managed group of engineers in the planning, design, implementation, testing, and enhancement of a windowing desktop environment and suite of end user tools for a high-resolution bitmap display workstation.
+                                                    <ul>
+                                                     <li>Hired and coordinated training of group of eleven engineers.</li>
+                                                     <li>Developed and introduced new versions of all the major end user tools.</li>
+                                                    </ul>
+                                                </p>
+                                        </div>
+                                        <div class="lead col-md-4">1986 – 1988</div>
+
+                                        <div class="col-md-8">
+                                            <div class="lead"><em>Product Manager</em></div>
+                                                <p>Responsible for strategic planning and product management of Metaphor's software.
+                                                    <li>Authored and reviewed requirement specifications, technical specifications, data sheets, press releases, and sales collateral.</li>
+                                                    <li>Led competitive analysis efforts, worked on product positioning, and established a new pricing program.</li>
+                                                    <li>Trained and managed Beta sites.</li>
+                                                    </ul>
+                                                </p>
+                                        </div>
+                                        <div class="lead col-md-4">1985 - 1986</div>
+                                        <div class="col-md-8">
+                                            <div class="lead"><em>Engineering Project Leader</em></div>
+                                                <p>Responsible for team management in the development of workstation and system software.
+                                                    <li>Co-designed, developed, and tested the Capsule tool, a visual programming application for business professionals.</li>
+                                                    <li>Individually designed, developed, and tested the spreadsheet application.</li>
+                                                    <li>Led the design, development, and delivery of Metaphor's first graphical database query/reporting product.</li>
+                                                    <li>Developed print server software to interface with Apple's very first LaserWriters.</li>
+                                                    </ul>
+                                                </p>
+                                        </div>
+                                        <div class="lead col-md-4">1983 – 1985</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="lead"><em>Logitech, Software Engineer</em>
+                                    </div>
+                                </div>
+                                <div class="lead col-md-4">1982 – 1983</div>
+                                <div class="col-md-8">
+                                    <div class="lead"><em>Bell Laboratories, Member of Technical Staff</em>
+                                    </div>
+                                </div>
+                                <div class="lead col-md-4">1981 - 1982</div>
+
+                        </div>
+                    </div>
+                    <h1><small>Education</small></h1>
+                    <p class="lead">Stanford University, Masters, Computer Science</p>
+                    <p class="lead">University of Michigan, Bachelor of Science, Math &amp; Computer Science</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div id="companies">
+                <div class="panel-body">
+                    <div class="page-header">
+                        <h1>Companies I've Worked With.</h1>
+                    </div>
+                    <div id="services-paragraph">
+                        <p class="lead">
+                            <table width="100%" border="0" cellspacing="1" cellpadding="6">
+                            		<tr>
+                                        <td><div align="center"><a href="http://www.proofpoint.com"><img src="Content/logo_proofpoint.png" alt="Proofpoint" width="205" height="52" border="0" /></a><br />
+                                          NASDAQ: PFPT<br />
+                                        </div></td>
+                                        <td><div align="center"><a href="http://www.responsys.com"><img src="Content/logo_responsys.gif" alt="Responsys" width="193" height="33" border="0" /></a>NASDAQ: MKTG </div></td>
+                                        <td><div align="center"><a href="http://www.opentable.com"><img src="Content/logo_opentable.png" alt="OpenTable" width="210" height="34" border="0" /></a><br />
+                                        NASDAQ: OPEN</div></td>
+                                      </tr>
+                            		<tr>
+                            		  <td><div align="center"><a href="http://www.kinsahealth.com"><img src="Content/logo_kinsa.png" alt="Kinsa" width="205" height="52" border="0" /></a><br />
+                            		  </div></td>
+                            		  <td><div align="center"><a href="http://www.counsyl.com"><img src="Content/logo_counsyl.png" alt="Counsyl" width="205" height="52" border="0" /></a><br />
+                            		  </div></td>
+                            		  <td align="center" valign="middle"><a href="http://www.zephyrhealth.com"><img src="Content/logo_zephyrhealth.png" alt="Zephyr Health" width="205" height="52" border="0" /></a><br /></td>
+                            	  </tr>
+                                      <tr>
+                                        <td><div align="center"><a href="http://www.badgeville.com"><img src="Content/logo_badgeville.png" alt="Badgeville" width="240" height="52" border="0" /></a></div></td>
+                                        <td><div align="center">
+                                          <p><a href="http://www.opentable.com"><img src="Content/logo_ness.png" alt="Ness Computing" width="212" height="54" border="0" /></a>acquired by OpenTable</p>
+                            </div></td>
+                                        <td><div align="center"><a href="http://www.demandbase.com"><img src="Content/logo_demandbase.png" alt="Demandbase" width="216" height="30" border="0" /></a></div></td>
+                                      </tr>
+                                      <tr>
+                                        <td><div align="center">
+                                          <a href="http://www.voltage.com"><img src="Content/logo_voltage.gif" alt="Voltage Security" width="135" height="57" border="0" /><br />
+                                          </a>acquired by HP
+                            </div></td>
+                                        <td><div align="center">
+                                          <div align="center">
+                                            <div align="center"><a href="http://www.efrontier.com"><img src="Content/logo_ef.jpg" alt="Efficient Frontier" width="191" height="60"border="0" /></a><br />
+                                              acquired by Adobe </div>
+                                          </div>
+                                        </div></td>
+                                        <td><div align="center">
+                                          <a href="http://www.vuclip.com"><img src="Content/logo_vuclip.gif" alt="VuClip" width="208" height="47" border="0" /></a><br />
+                                              acquired by PCCW </div>
+                                          </a>
+                            </div></td>
+                                      </tr>
+                                      <tr>
+                                        <td><div align="center"><a href="http://www.plasticjungle.com"><img src="Content/logo_plasticjungle.jpg" alt="Plastic Jungle" width="232" height="72" border="0" /></a></div></td>
+                                        <td align="center" valign="middle"><a href="http://www.scribd.com"><img src="Content/logo_scribd.jpg" alt="Scribd" width="199" height="51" border="0" /></a></td>
+                                        <td><p align="center"><a href="http://www.returnpath.com"><img src="Content/logo_returnpath.gif" alt="ReturnPath" width="161" height="84" border="0" /></a></p></td>
+                                      </tr>
+                                      <tr>
+                                        <td><div align="center">
+                                          <div align="center">
+                                            <a href="http://www.posterous.com"><img src="Content/logo_posterous.png" width="103" height="93" alt="Posterous"/></a><br />
+                                              acquired by Twitter                  <br />
+                                          </div>
+                                        </div></td>
+                                        <td><div align="center">
+                            <div align="center">
+                                          <a href="http://www.good.com"><img src="Content/logo_good.jpg" alt="Good Technology" width="98" height="98" border="0" /><br />
+                                          </a>acquired by Motorola
+                            </div>
+                                        </div></td>
+                                        <td><div align="center">
+                            <p><a href="http://www.inadco.com"><img src="Content/logo_inadco.gif" alt="Inadco" width="149" height="69" border="0" /></a></p>
+                                        </div></td>
+                                      </tr>
+                                      <tr>
+                                        <td><div align="center">
+                            <div align="center"><a href="http://www.ironkey.com"><img src="Content/logo_ironkey.png" alt="IronKey" width="198" height="35" border="0" /></a></div>
+                            </div></td>
+                                        <td><div align="center">
+                                          <p><a href="http://www.moka5.com"><img src="Content/logo_mokafive.gif" alt="moka5" width="207" height="47" border="0" longdesc="http://www.moka5.com" /></a></p>
+                                        </div></td>
+                                        <td><div align="center">
+                                          <div align="center"><a href="http://www.cenzic.com"><img src="Content/logo_cenzic.gif" alt="Cenzic" width="209" height="50" border="0" /></a></a>acquired by Trustwave</p></div>
+                                        </div></td>
+                                      </tr>
+
+                                      <tr>
+                                        <td><div align="center"><a href="http://www.nearbynow.com"><img src="Content/logo_nearbynow.gif" alt="NearbyNow" width="207" height="40" border="0" longdesc="http://www.moka5.com" /></a>acquired by JiWire</div></td>
+                                        <td><div align="center"><a href="http://www.bigtent.com"><img src="Content/logo_bigtent.gif" alt="BigTent" width="180" height="43" border="0" /></a><br />
+                                        acquired by Federated
+                                        Media</div></td>
+                                        <td><div align="center">
+                                          <a href="http://www.socialtext.com"><img src="Content/logo_socialtext.GIF" alt="Socialtext" width="222" height="42" border="0" /></a>acquired by Peoplefluency<br />
+
+                            </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><div align="center">
+                                          <a href="http://www.ketera.com"><img src="Content/logo_ketera.gif" alt="Ketera" width="196" height="54" border="0" /></a>acquired by Rearden
+                            </div></td>
+                                        <td><div align="center"> <a href="http://www.friendster.com"><img src="Content/logo_friendster.gif" alt="Friendster" width="228" height="42" border="0" /></a>acquired by MOL Global</div></td>
+                                        <td><div align="center">
+                                          <div align="center">
+                                            <div align="center"><a href="http://www.agile.com"><img src="Content/logo_onerev.gif" alt="oneREV" width="137" height="41" border="0" /></a><br />
+                                            acquired by Agile/Oracle </div>
+                                          </div>
+                                        <a href="http://www.efrontier.com"></a></div></td>
+                                      </tr>
+                                      <tr>
+                                        <td><div align="center">
+                                          <a href="http://www.trintech.com"><img src="Content/logo_movaris.gif" alt="Movaris" width="145" height="58" border="0" /><br />
+                                          </a>acquired by TrinTech
+                                        </div></td>
+                                        <td><div align="center"><a href="http://www.broadcom.com"><img src="Content/logo_lvl7.gif" alt="Level 7" width="129" height="66" border="0" /></a><br />
+                                        acquired by Broadcom</div></td>
+                                        <td><div align="center">
+                                          <a href="http://www.sun.com"><img src="Content/logo_terraspring.jpg" alt="Terraspring" width="186" height="48" border="0" /></a><br />
+                                            acquired by Sun/Oracle
+                                        </div></td>
+                                      </tr>
+                                      <tr>
+                                        <td><div align="center"></div></td>
+                                        <td><div align="center"></div></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                            </table>
+
+                        </p><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="panel panel-default" id="boards">
+                <div class="panel-body">
+                    <div class="page-header">
+                        <h1>Boards I'm On.</h1>
+                    </div>
+                    <div id="services-paragraph">
+                        <p class="lead">
+                            <table width="100%" border="0" cellspacing="2" cellpadding="20">
+                                      <tr>
+                                        <td><div align="center"><a href="http://www.computerhistory.org"><img src="Content/logo_CHM.png" alt="Computer History Museum" width="225" height="75" border="0" /></a></div></td>
+                                        <td><div align="center"><a href="http://www.karmasphere.com"><img src="Content/logo_karmasphere.png" alt="Karmasphere" width="169" height="63" border="0" /></a></div></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                            </table>
+                        </p><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="well" id="contact">
+                <div class="panel-body">
+                    <div class="page-header">
+                        <h1>Contact Me.</h1>
+                    </div>
+                    <div id="services-paragraph">
+                        <p class="lead">
+                            E-mail: <a href="mailto:debby@debbymeredith.com">debby@debbymeredith.com</a><br><br>
+                        	Phone: 650.704.7166
+                        </p><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        $(document).ready(function(){
+
+            $("#enter").click(function(){
+                $('#welcome').show();
+                $('#whatIDo').show();
+                $('#background').show();
+                $('#boards').show();
+                $('#companies').show();
+                $('#contact').show();
+                $("#enter").animate({marginLeft: "+=100px", opacity: '0.0'}, "slow");
+                $("nav").fadeIn();
+            });
+
+            $("#goto-welcome").click(function(event){
+                event.preventDefault();
+                $("#goto-welcome").addClass("active");
+                $("#goto-background").removeClass('active');
+                $("#goto-wid").removeClass('active');
+                $("#goto-boards").removeClass('active');
+                $("#goto-companies").removeClass('active');
+                $("#goto-contact").removeClass('active');
+                $('html, body').animate({
+                    scrollTop: $("#welcome").offset().top},
+                ($(document).height() / 2));
+            });
+
+            $("#goto-background").click(function(event){
+                event.preventDefault();
+                $("#goto-background").addClass("active");
+                $("#goto-welcome").removeClass('active');
+                $("#goto-wid").removeClass('active');
+                $("#goto-boards").removeClass('active');
+                $("#goto-companies").removeClass('active');
+                $("#goto-contact").removeClass('active');
+                $('html, body').animate({
+                    scrollTop: $("#background").offset().top},
+                ($(document).height() / 2));
+            });
+
+            $("#goto-wid").click(function(event){
+                event.preventDefault();
+                $("#goto-wid").addClass("active");
+                $("#goto-background").removeClass('active');
+                $("#goto-welcome").removeClass('active');
+                $("#goto-boards").removeClass('active');
+                $("#goto-companies").removeClass('active');
+                $("#goto-contact").removeClass('active');
+                $('html, body').animate({
+                    scrollTop: $("#whatIDo").offset().top},
+                ($(document).height() / 2));
+            });
+
+            $("#goto-boards").click(function(event){
+                event.preventDefault();
+                $("#goto-boards").addClass("active");
+                $("#goto-background").removeClass('active');
+                $("#goto-wid").removeClass('active');
+                $("#goto-welcome").removeClass('active');
+                $("#goto-companies").removeClass('active');
+                $("#goto-contact").removeClass('active');
+                $('html, body').animate({
+                    scrollTop: $("#boards").offset().top},
+                ($(document).height() / 2));
+            });
+
+            $("#goto-companies").click(function(event){
+                event.preventDefault();
+                $("#goto-welcome").addClass("active");
+                $("#goto-background").removeClass('active');
+                $("#goto-wid").removeClass('active');
+                $("#goto-boards").removeClass('active');
+                $("#goto-welcome").removeClass('active');
+                $("#goto-contact").removeClass('active');
+                $('html, body').animate({
+                    scrollTop: $("#companies").offset().top},
+                ($(document).height() / 2));
+            });
+
+            $("#goto-contact").click(function(event){
+                event.preventDefault();
+                $("#goto-welcome").addClass("active");
+                $("#goto-background").removeClass('active');
+                $("#goto-wid").removeClass('active');
+                $("#goto-boards").removeClass('active');
+                $("#goto-companies").removeClass('active');
+                $("#goto-welcome").removeClass('active');
+                $('html, body').animate({
+                    scrollTop: $("#contact").offset().top},
+                ($(document).height() / 2));
+            });
+        });
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
